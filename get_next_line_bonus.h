@@ -6,7 +6,7 @@
 /*   By: jzoltan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 04:16:04 by jzoltan           #+#    #+#             */
-/*   Updated: 2022/01/13 13:36:48 by jzoltan          ###   ########.fr       */
+/*   Updated: 2022/01/14 15:15:34 by jzoltan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,17 @@ struct						s_ft_string
 };
 
 typedef struct s_ft_string	*t_ft_string;
+
+struct s_list
+{
+	struct s_list	*root;
+	struct s_list	*next;
+	int				fd;
+	int				b_index;
+	int				b_end;
+	t_ft_string		string;
+	char			buffer[BUFFER_SIZE];
+};
 
 struct s_ft_string	*ft_string_init(size_t app_size);
 void				ft_string_free(struct s_ft_string *string);

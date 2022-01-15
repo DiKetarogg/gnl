@@ -6,23 +6,12 @@
 /*   By: jzoltan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 04:15:48 by jzoltan           #+#    #+#             */
-/*   Updated: 2022/01/13 13:35:55 by jzoltan          ###   ########.fr       */
+/*   Updated: 2022/01/14 15:13:03 by jzoltan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <stdlib.h>
-
-struct s_list
-{
-	struct s_list	*root;
-	struct s_list	*next;
-	int				fd;
-	int				b_index;
-	int				b_end;
-	t_ft_string		string;
-	char			buffer[BUFFER_SIZE];
-};
 
 typedef struct s_list	*t_list;
 
